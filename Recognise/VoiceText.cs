@@ -50,7 +50,7 @@ namespace voice2redmine.Recognise
 
             File.Delete(file);
             //Json
-            return new VoiceTextData() { Rating = respdata.hypotheses[0].confidence, Recognised = respdata.hypotheses[0].utterance };
+            return new VoiceTextData() { Rating = respdata.result[0].alternative[0].confidence, Recognised = respdata.result[0].alternative[0].transcript };
         }
     }
 }
